@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 5</title>
+    <style>
+        .ordered_list_with_CSS li {
+            list-style-type:upper-roman;
+        }
+        .decmal {
+            list-style-type:decimal;
+        }
+        .upper-alpha {
+            list-style-type:upper-alpha;
+        }
+        .lower-alpha {
+            list-style-type:lower-alpha;
+        }
+        .upper-roman {
+            list-style-type:upper-roman;
+        }
+        .lower-roman {
+            list-style-type:lower-roman;
+        }
+        .unrodered-list{
+            list-style-type:square;
+        }
+        .circle{
+            list-style-type:circle;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Lecture 5: HTML Lists</h1>
+    <h2>Ordered Lists</h2>
+    <ol>
+		<li> item 1</li>
+		<li> item 2 </li>
+    </ol>
+    <h2>Ordered List - with CSS list-style-type:</h2>
+    <ol class="ordered_list_with_CSS">
+		<li> Notebook</li>
+		<li> Ballpen </li>
+        <li> Yellow Paper</li>
+        <li> Bag</li>
+        <li> Pencil</li>
+    </ol>
+    <h2>Decimal List</h2>
+    <ol class="decimal">
+		<li> Notebook</li>
+		<li> Ballpen </li>
+        <li> Yellow Paper</li>
+        <li> Bag</li>
+        <li> Pencil</li>
+    </ol>
+    <h2>Upper-alpha List</h2>
+    <ol class="upper-alpha">
+		<li> Notebook</li>
+		<li> Ballpen </li>
+        <li> Yellow Paper</li>
+        <li> Bag</li>
+        <li> Pencil</li>
+    </ol>
+    <h2>Lower-alpha List</h2>
+    <ol class="lower-alpha">
+		<li> Notebook</li>
+		<li> Ballpen </li>
+        <li> Yellow Paper</li>
+        <li> Bag</li>
+        <li> Pencil</li>
+    </ol>
+    <h2>Upper-roman List</h2>
+    <ol class="upper-roman">
+		<li> Notebook</li>
+		<li> Ballpen </li>
+        <li> Yellow Paper</li>
+        <li> Bag</li>
+        <li> Pencil</li>
+    </ol>
+    <h2>Lower-roman List</h2>
+    <ol class="lower-roman" start="2">
+		<li> Notebook</li>
+		<li value="9"> Ballpen </li>
+        <li> Yellow Paper</li>
+        <li value="15"> Bag</li>
+        <li> Pencil</li>
+    </ol>
+    <h2>Unordered List</h2>
+    <ul>
+        <li> Notebook</li>
+		<li> Ballpen </li>
+        <li> Yellow Paper</li>
+        <li> Bag</li>
+        <li> Pencil</li>
+    </ul>
+    <h2>Unordered List - with CSS</h2>
+    <ul class="unrodered-list">
+        <li> Notebook</li>
+		<li> Ballpen </li>
+        <li> Yellow Paper</li>
+        <li> Bag</li>
+        <li> Pencil</li>
+    </ul>
+    <h2>Unordered List - wtih 2 CSS</h2>
+    <ul class="unrodered-list">
+        <li>First Item</li>
+            <ul class="circle">
+                <li>sub point</li>
+                <li>another sub point</li>
+            </ul>
+		<li>Second Item</li>
+            <ul class="circle">
+                <li>sub point</li>
+                <li>another sub point</li>
+            </ul>
+        <li>Third Item</li>
+            <ul class="circle">
+                <li>sub point</li>
+                <li>another sub point</li>
+            </ul>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Lists and Tables</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f8ff;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .example {
+            background-color: #f9f9f9;
+            border-left: 4px solid #3498db;
+            padding: 10px 15px;
+            margin: 15px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .note {
+            background-color: #fffde7;
+            padding: 10px;
+            border-left: 4px solid #ffd600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HTML Lists and Tables</h1>
+        
+        <h2>HTML Styles</h2>
+        <p>The HTML style attribute is used to add styles to an element, such as color, font, size, and more.</p>
+        
+        <h3>Background Color</h3>
+        <div class="example">
+            <h4 style="background-color:cyan;">This is a heading with cyan background</h4>
+            <p style="background-color:tomato;">This is a paragraph with tomato background.</p>
+        </div>
+        
+        <h3>Text Color</h3>
+        <div class="example">
+            <h4 style="color:red;">This is a red heading</h4>
+            <p style="color:blue;">This is a blue paragraph.</p>
+        </div>
+        
+        <h3>Fonts</h3>
+        <div class="example">
+            <h4 style="font-family:verdana;">This is a heading with Verdana font</h4>
+            <p style="font-family:courier;">This is a paragraph with Courier font.</p>
+        </div>
+        
+        <h3>Text Size</h3>
+        <div class="example">
+            <h4 style="font-size:300%;">This is a heading with 300% size</h4>
+            <p style="font-size:30pt;">This is a paragraph with 30pt size.</p>
+        </div>
+        
+        <h3>Text Alignment</h3>
+        <div class="example">
+            <h4 style="text-align:center;">Centered Heading</h4>
+            <p style="text-align:center;">Centered paragraph.</p>
+        </div>
+        
+        <h2>HTML Tables</h2>
+        
+        <h3>Basic Table</h3>
+        <table>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>Nicole</td>
+                <td>Pascual</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td>Allen</td>
+                <td>Ramirez</td>
+                <td>18</td>
+            </tr>
+        </table>
+        
+        <h3>Table with Collapsed Borders</h3>
+        <table style="border-collapse: collapse;">
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>Nicole</td>
+                <td>Pascual</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td>Allen</td>
+                <td>Ramirez</td>
+                <td>18</td>
+            </tr>
+        </table>
+        
+        <h3>Table with Cell Padding</h3>
+        <table style="border-collapse: collapse;">
+            <tr>
+                <th style="padding: 15px;">Firstname</th>
+                <th style="padding: 15px;">Lastname</th>
+                <th style="padding: 15px;">Age</th>
+            </tr>
+            <tr>
+                <td style="padding: 15px;">Nicole</td>
+                <td style="padding: 15px;">Pascual</td>
+                <td style="padding: 15px;">18</td>
+            </tr>
+        </table>
+        
+        <h3>Cells that Span Many Columns (colspan)</h3>
+        <table style="border-collapse: collapse;">
+            <tr>
+                <th>Company Name</th>
+                <th colspan="2">Telephone</th>
+            </tr>
+            <tr>
+                <td>The Travel Club</td>
+                <td>(02) 332-7183</td>
+                <td>(02) 815-7418</td>
+            </tr>
+        </table>
+        
+        <h3>Cells that Span Many Rows (rowspan)</h3>
+        <table style="border-collapse: collapse;">
+            <tr>
+                <th>Company Name:</th>
+                <td>The Travel Club</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Telephone:</th>
+                <td>(02) 332-7183</td>
+            </tr>
+            <tr>
+                <td>(02) 815-7418</td>
+            </tr>
+        </table>
+        
+        <div class="note">
+            <h3>References:</h3>
+            <ul>
+                <li>Jenkins, S. (2013). Web Design All-in-One for Dummies. John Wiley & Sons.</li>
+                <li>Parker, J. (2021). HTML for Beginners: A Complete Beginners Guide to Learn Html in 1 Hour and Master Your Web Designing.</li>
+                <li>W3Schools online web tutorials. (n.d.). https://www.w3schools.com/</li>
+                <li>Sklar, J. (2012). Web Design Principles.</li>
+                <li>Castro, E., & Hyslop, B. (2013). HTML and CSS: Visual QuickStart Guide. Peachpit Press.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

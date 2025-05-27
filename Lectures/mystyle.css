@@ -1,0 +1,34 @@
+body
+{
+    /*background-color:rgb(250,235,215);*/
+    background-image:url("https://images.pexels.com/photos/1300578/pexels-photo-1300578.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    background-size:cover;
+
+    /*background:#ffffff url("https://images.pexels.com/photos/1300578/pexels-photo-1300578.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat right top;*/
+}
+h1
+{
+    color:rgb(139, 0, 0);
+    margin-left: 20px;
+}
+.dotted
+{
+    color: maroon;
+    border:2px dotted rgb(128,0,0);
+    padding:5px;
+}
+.dashed
+{
+    color: maroon;
+    border:2px dashed rgb(128,0,0);
+    padding:5px;
+}
+.solid
+{
+    color: maroon;
+    border:2px solid rgb(128,0,0);
+    padding:5px;
+}

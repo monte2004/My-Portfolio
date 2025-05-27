@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher's Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="FinalsACT2-css.css">
+</head>
+<body>
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <div class="sidebar col-md-3 col-lg-2">
+            <div class="text-center mb-4">
+                <h4>Teacher's Dashboard</h4>
+            </div>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#dashboard" data-bs-toggle="tab">
+                        <i class="bi bi-speedometer2"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#calendar-page" data-bs-toggle="tab">
+                        <i class="bi bi-calendar-date"></i> Calendar
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#schedule-page" data-bs-toggle="tab">
+                        <i class="bi bi-journal-check"></i> Today's Schedule
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#materials-page" data-bs-toggle="tab">
+                        <i class="bi bi-folder"></i> Teaching Materials
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <h4>Welcome Back, <span class="text-primary">Professor Montesines</span></h4>
+                <div class="user-profile">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User">
+                    <span>Sean Angel</span>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button class="btn btn-sm btn-outline-secondary me-2" id="darkModeToggle">
+                    <i class="bi bi-moon"></i> Dark Mode
+                </button>
+                <button class="btn btn-sm btn-outline-secondary position-relative">
+                    <i class="bi bi-bell"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        3
+                    </span>
+                </button>
+            </div>
+
+            <div class="tab-content">
+                <!-- Dashboard Tab -->
+                <div class="tab-pane fade show active" id="dashboard">
+                    <div class="row">
+                        <!-- Left Column - Calendar -->
+                        <div class="col-lg-8">
+                            <div class="card">
+                                <div class="card-header">
+                                    <span>Interactive Calendar</span>
+                                    <button class="btn btn-sm btn-primary">Add Event</button>
+                                </div>
+                                <div class="card-body">
+                                    <div id="calendar" class="calendar"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Column - Stats and Attendance -->
+                        <div class="col-lg-4">
+                            <!-- Quick Stats Card -->
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <span>Quick Stats</span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                        <h6>Classes Handled</h6>
+                                        <h3 class="text-primary">5</h3>
+                                    </div>
+                                    <div class="mb-3">
+                                        <h6>Students</h6>
+                                        <h3 class="text-success">142</h3>
+                                    </div>
+                                    <div class="mb-3">
+                                        <h6>Upcoming Events</h6>
+                                        <h3 class="text-warning">3</h3>
+                                    </div>
+                                    <div>
+                                        <h6>Materials Shared</h6>
+                                        <h3 class="text-info">28</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Today's Attendance Card -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <span>Today's Attendance</span>
+                                    <button class="btn btn-sm btn-primary">Take Attendance</button>
+                                </div>
+                                <div class="card-body">
+                                    <div class="attendance-summary mb-3">
+                                        <div class="d-flex justify-content-between">
+                                            <span>Math 10 (8:00 AM)</span>
+                                            <span class="badge bg-success">Completed</span>
+                                        </div>
+                                        <div class="progress mt-1">
+                                            <div class="progress-bar bg-success" style="width: 94%">28/30</div>
+                                        </div>
+                                    </div>
+                                    <div class="attendance-summary mb-3">
+                                        <div class="d-flex justify-content-between">
+                                            <span>Physics 11 (1:00 PM)</span>
+                                            <span class="badge bg-warning">Pending</span>
+                                        </div>
+                                        <div class="progress mt-1">
+                                            <div class="progress-bar bg-secondary" style="width: 0%">0/28</div>
+                                        </div>
+                                    </div>
+                                    <div class="attendance-summary">
+                                        <div class="d-flex justify-content-between">
+                                            <span>Office Hours (3:00 PM)</span>
+                                            <span class="badge bg-secondary">Not Started</span>
+                                        </div>
+                                        <div class="progress mt-1">
+                                            <div class="progress-bar bg-secondary" style="width: 0%">0/0</div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="text-center">
+                                        <button class="btn btn-sm btn-outline-primary">View Attendance Reports</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                </div>
+                    <div class="row mt-4">
+                        <!-- Today's Schedule -->
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <span>Today's Schedule</span>
+                                    <button class="btn btn-sm btn-primary">View All</button>
+                                </div>
+                                <div class="card-body">
+                                    <div class="schedule-item">
+                                        <div class="d-flex justify-content-between">
+                                            <h6>Mathematics - Grade 10</h6>
+                                            <span class="badge bg-primary">Lecture</span>
+                                        </div>
+                                        <p class="mb-1"><i class="bi bi-clock"></i> 08:00 AM - 09:30 AM</p>
+                                        <p class="mb-0"><i class="bi bi-geo-alt"></i> Room 302</p>
+                                    </div>
+                                    
+                                    <div class="schedule-item meeting">
+                                        <div class="d-flex justify-content-between">
+                                            <h6>Department Meeting</h6>
+                                            <span class="badge bg-success">Meeting</span>
+                                        </div>
+                                        <p class="mb-1"><i class="bi bi-clock"></i> 10:00 AM - 11:30 AM</p>
+                                        <p class="mb-0"><i class="bi bi-geo-alt"></i> Conference Room</p>
+                                    </div>
+                                    
+                                    <div class="schedule-item">
+                                        <div class="d-flex justify-content-between">
+                                            <h6>Physics - Grade 11</h6>
+                                            <span class="badge bg-primary">Lecture</span>
+                                        </div>
+                                        <p class="mb-1"><i class="bi bi-clock"></i> 01:00 PM - 02:30 PM</p>
+                                        <p class="mb-0"><i class="bi bi-geo-alt"></i> Room 215</p>
+                                    </div>
+                                    
+                                    <div class="schedule-item office-hours">
+                                        <div class="d-flex justify-content-between">
+                                            <h6>Office Hours</h6>
+                                            <span class="badge bg-warning">Office Hours</span>
+                                        </div>
+                                        <p class="mb-1"><i class="bi bi-clock"></i> 03:00 PM - 04:30 PM</p>
+                                        <p class="mb-0"><i class="bi bi-geo-alt"></i> Faculty Office</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recent Materials -->
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <span>Recent Materials</span>
+                                    <button class="btn btn-sm btn-primary">Upload New</button>
+                                </div>
+                                <div class="card-body">
+                                    <div class="material-item">
+                                        <div class="material-icon ppt">
+                                            <i class="bi bi-file-earmark-ppt"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6>Algebra Basics.pptx</h6>
+                                            <small class="text-muted">Uploaded: 2 days ago | Size: 4.2MB</small>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-download"></i></button>
+                                            <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-share"></i></button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="material-item">
+                                        <div class="material-icon pdf">
+                                            <i class="bi bi-file-earmark-pdf"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6>Physics Problems Set.pdf</h6>
+                                            <small class="text-muted">Uploaded: 1 week ago | Size: 2.8MB</small>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-download"></i></button>
+                                            <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-share"></i></button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="material-item">
+                                        <div class="material-icon doc">
+                                            <i class="bi bi-file-earmark-word"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6>Exam Guidelines.docx</h6>
+                                            <small class="text-muted">Uploaded: 1 week ago | Size: 1.5MB</small>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-download"></i></button>
+                                            <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-share"></i></button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="material-item">
+                                        <div class="material-icon">
+                                            <i class="bi bi-file-earmark-text"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6>Reading Assignment.txt</h6>
+                                            <small class="text-muted">Uploaded: 2 weeks ago | Size: 0.5MB</small>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-download"></i></button>
+                                            <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-share"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calendar Page -->
+                <div class="tab-pane fade" id="calendar-page">
+                    <div class="card">
+                        <div class="card-header">
+                            <span>Full Calendar</span>
+                            <div>
+                                <button class="btn btn-sm btn-primary me-2">Add Event</button>
+                                <button class="btn btn-sm btn-outline-secondary">Export</button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div id="full-calendar" class="calendar"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Schedule Page -->
+                <div class="tab-pane fade" id="schedule-page">
+                    <div class="card">
+                        <div class="card-header">
+                            <span>Detailed Schedule</span>
+                            <div>
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-outline-secondary">Today</button>
+                                    <button class="btn btn-sm btn-outline-secondary">Week</button>
+                                    <button class="btn btn-sm btn-outline-secondary active">Month</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card mb-4">
+                                        <div class="card-header bg-primary text-white">
+                                            Monday
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="schedule-item">
+                                                <div class="d-flex justify-content-between">
+                                                    <h6>Mathematics - Grade 10</h6>
+                                                    <span class="badge bg-primary">Lecture</span>
+                                                </div>
+                                                <p class="mb-1"><i class="bi bi-clock"></i> 08:00 AM - 09:30 AM</p>
+                                                <p class="mb-0"><i class="bi bi-geo-alt"></i> Room 302</p>
+                                            </div>
+                                            
+                                            <div class="schedule-item">
+                                                <div class="d-flex justify-content-between">
+                                                    <h6>Advanced Calculus - Grade 12</h6>
+                                                    <span class="badge bg-primary">Lecture</span>
+                                                </div>
+                                                <p class="mb-1"><i class="bi bi-clock"></i> 10:00 AM - 11:30 AM</p>
+                                                <p class="mb-0"><i class="bi bi-geo-alt"></i> Room 410</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="card mb-4">
+                                        <div class="card-header bg-primary text-white">
+                                            Tuesday
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="schedule-item">
+                                                <div class="d-flex justify-content-between">
+                                                    <h6>Mathematics - Grade 9</h6>
+                                                    <span class="badge bg-primary">Lecture</span>
+                                                </div>
+                                                <p class="mb-1"><i class="bi bi-clock"></i> 10:00 AM - 11:30 AM</p>
+                                                <p class="mb-0"><i class="bi bi-geo-alt"></i> Room 201</p>
+                                            </div>
+                                            
+                                            <div class="schedule-item">
+                                                <div class="d-flex justify-content-between">
+                                                    <h6>Physics - Grade 11</h6>
+                                                    <span class="badge bg-primary">Lecture</span>
+                                                </div>
+                                                <p class="mb-1"><i class="bi bi-clock"></i> 01:00 PM - 02:30 PM</p>
+                                                <p class="mb-0"><i class="bi bi-geo-alt"></i> Room 215</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="card mb-4">
+                                        <div class="card-header bg-primary text-white">
+                                            Wednesday
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="schedule-item">
+                                                <div class="d-flex justify-content-between">
+                                                    <h6>Mathematics - Grade 10</h6>
+                                                    <span class="badge bg-primary">Lecture</span>
+                                                </div>
+                                                <p class="mb-1"><i class="bi bi-clock"></i> 08:00 AM - 09:30 AM</p>
+                                                <p class="mb-0"><i class="bi bi-geo-alt"></i> Room 302</p>
+                                            </div>
+                                            
+                                            <div class="schedule-item">
+                                                <div class="d-flex justify-content-between">
+                                                    <h6>Advanced Calculus - Grade 12</h6>
+                                                    <span class="badge bg-primary">Lecture</span>
+                                                </div>
+                                                <p class="mb-1"><i class="bi bi-clock"></i> 10:00 AM - 11:30 AM</p>
+                                                <p class="mb-0"><i class="bi bi-geo-alt"></i> Room 410</p>
+                                            </div>
+                                            
+                                            <div class="schedule-item meeting">
+                                                <div class="d-flex justify-content-between">
+                                                    <h6>Faculty Meeting</h6>
+                                                    <span class="badge bg-success">Meeting</span>
+                                                </div>
+                                                <p class="mb-1"><i class="bi bi-clock"></i> 03:00 PM - 04:30 PM</p>
+                                                <p class="mb-0"><i class="bi bi-geo-alt"></i> Conference Room</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="card mb-4">
+                                        <div class="card-header bg-primary text-white">
+                                            Thursday
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="schedule-item">
+                                                <div class="d-flex justify-content-between">
+                                                    <h6>Mathematics - Grade 9</h6>
+                                                    <span class="badge bg-primary">Lecture</span>
+                                                </div>
+                                                <p class="mb-1"><i class="bi bi-clock"></i> 10:00 AM - 11:30 AM</p>
+                                                <p class="mb-0"><i class="bi bi-geo-alt"></i> Room 201</p>
+                                            </div>
+                                            
+                                            <div class="schedule-item">
+                                                <div class="d-flex justify-content-between">
+                                                    <h6>Physics - Grade 11</h6>
+                                                    <span class="badge bg-primary">Lecture</span>
+                                                </div>
+                                                <p class="mb-1"><i class="bi bi-clock"></i> 01:00 PM - 02:30 PM</p>
+                                                <p class="mb-0"><i class="bi bi-geo-alt"></i> Room 215</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="card mb-4">
+                                        <div class="card-header bg-primary text-white">
+                                            Friday
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="schedule-item">
+                                                <div class="d-flex justify-content-between">
+                                                    <h6>Mathematics - Grade 10</h6>
+                                                    <span class="badge bg-primary">Lecture</span>
+                                                </div>
+                                                <p class="mb-1"><i class="bi bi-clock"></i> 08:00 AM - 09:30 AM</p>
+                                                <p class="mb-0"><i class="bi bi-geo-alt"></i> Room 302</p>
+                                            </div>
+                                            
+                                            <div class="schedule-item">
+                                                <div class="d-flex justify-content-between">
+                                                    <h6>Physics - Grade 10</h6>
+                                                    <span class="badge bg-primary">Lecture</span>
+                                                </div>
+                                                <p class="mb-1"><i class="bi bi-clock"></i> 01:00 PM - 03:00 PM</p>
+                                                <p class="mb-0"><i class="bi bi-geo-alt"></i> Room 215</p>
+                                            </div>
+                                            
+                                            <div class="schedule-item office-hours">
+                                                <div class="d-flex justify-content-between">
+                                                    <h6>Office Hours</h6>
+                                                    <span class="badge bg-warning">Office Hours</span>
+                                                </div>
+                                                <p class="mb-1"><i class="bi bi-clock"></i> 03:00 PM - 04:30 PM</p>
+                                                <p class="mb-0"><i class="bi bi-geo-alt"></i> Faculty Office</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Materials Page -->
+                <div class="tab-pane fade" id="materials-page">
+                    <div class="card">
+                        <div class="card-header">
+                            <span>Teaching Materials</span>
+                            <div>
+                                <button class="btn btn-sm btn-primary me-2"><i class="bi bi-upload"></i> Upload New</button>
+                                <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-folder-plus"></i> Create Folder</button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search materials...">
+                                        <button class="btn btn-outline-secondary" type="button"><i class="bi bi-search"></i></button>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="float-end">
+                                        <div class="btn-group">
+                                            <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-grid"></i></button>
+                                            <button class="btn btn-sm btn-outline-secondary active"><i class="bi bi-list"></i></button>
+                                        </div>
+                                        <div class="btn-group ms-2">
+                                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
+                                                Sort By
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Name</a></li>
+                                                <li><a class="dropdown-item" href="#">Date</a></li>
+                                                <li><a class="dropdown-item" href="#">Size</a></li>
+                                                <li><a class="dropdown-item" href="#">Type</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#"><i class="bi bi-house-door"></i></a></li>
+                                        <li class="breadcrumb-item"><a href="#">Teaching Materials</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Current Folder</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                            
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Type</th>
+                                            <th>Size</th>
+                                            <th>Last Modified</th>
+                                            <th>Shared</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="bi bi-file-earmark-ppt-fill text-danger me-2"></i>
+                                                    Algebra Basics.pptx
+                                                </div>
+                                            </td>
+                                            <td>PowerPoint</td>
+                                            <td>4.2MB</td>
+                                            <td>2 days ago</td>
+                                            <td><span class="badge bg-success">Yes</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></button>
+                                                <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-share"></i></button>
+                                                <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="bi bi-file-earmark-pdf-fill text-warning me-2"></i>
+                                                    Physics Problems Set.pdf
+                                                </div>
+                                            </td>
+                                            <td>PDF</td>
+                                            <td>2.8MB</td>
+                                            <td>1 week ago</td>
+                                            <td><span class="badge bg-success">Yes</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></button>
+                                                <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-share"></i></button>
+                                                <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="bi bi-file-earmark-word-fill text-primary me-2"></i>
+                                                    Exam Guidelines.docx
+                                                </div>
+                                            </td>
+                                            <td>Word</td>
+                                            <td>1.5MB</td>
+                                            <td>1 week ago</td>
+                                            <td><span class="badge bg-secondary">No</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></button>
+                                                <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-share"></i></button>
+                                                <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="bi bi-folder-fill text-warning me-2"></i>
+                                                    Lecture Notes
+                                                </div>
+                                            </td>
+                                            <td>Folder</td>
+                                            <td>-</td>
+                                            <td>2 weeks ago</td>
+                                            <td><span class="badge bg-success">Yes</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-primary"><i class="bi bi-eye"></i></button>
+                                                <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-share"></i></button>
+                                                <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="bi bi-file-earmark-text-fill text-secondary me-2"></i>
+                                                    Reading Assignment.txt
+                                                </div>
+                                            </td>
+                                            <td>Text</td>
+                                            <td>0.5MB</td>
+                                            <td>2 weeks ago</td>
+                                            <td><span class="badge bg-secondary">No</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></button>
+                                                <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-share"></i></button>
+                                                <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="bi bi-file-earmark-excel-fill text-success me-2"></i>
+                                                    Grades.xlsx
+                                                </div>
+                                            </td>
+                                            <td>Excel</td>
+                                            <td>3.1MB</td>
+                                            <td>3 weeks ago</td>
+                                            <td><span class="badge bg-secondary">No</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></button>
+                                                <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-share"></i></button>
+                                                <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                    </li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FullCalendar CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
+    
+    <!-- FullCalendar JS -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="FinalsACT2-javascript.js"></script>
+</body>
+</html>

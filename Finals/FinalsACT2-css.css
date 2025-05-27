@@ -1,0 +1,240 @@
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --accent-color: #e74c3c;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+            --warning-color: #f39c12;
+            --info-color: #1abc9c;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+        }
+        
+        .sidebar {
+            background-color: var(--dark-color);
+            color: white;
+            height: 100vh;
+            width: 250px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            padding-top: 20px;
+            z-index: 100;
+            overflow-y: auto;
+        }
+        .sidebar .nav-link {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 5px;
+            border-radius: 5px;
+            padding: 10px 15px;
+        }
+        
+        .sidebar .nav-link:hover, .sidebar .nav-link.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .sidebar .nav-link i {
+            margin-right: 10px;
+        }
+        
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            width: calc(100% - 250px);
+            box-sizing: border-box;
+            position: relative;
+        }
+        
+        .header {
+            background-color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .user-profile {
+            display: flex;
+            align-items: center;
+        }
+        
+        .user-profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-header {
+            background-color: white;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .calendar {
+            width: 100%;
+        }
+        
+        .calendar .fc-header-toolbar {
+            margin-bottom: 10px;
+        }
+        
+        .event-lecture {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .event-meeting {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        .event-exam {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+        
+        .event-office-hours {
+            background-color: var(--warning-color);
+            border-color: var(--warning-color);
+        }
+        
+        .event-other {
+            background-color: var(--info-color);
+            border-color: var(--info-color);
+        }
+        
+        .schedule-item {
+            border-left: 4px solid var(--primary-color);
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: white;
+            border-radius: 5px;
+        }
+        
+        .schedule-item.meeting {
+            border-left-color: var(--secondary-color);
+        }
+        
+        .schedule-item.office-hours {
+            border-left-color: var(--warning-color);
+        }
+        
+        .material-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        .material-item:last-child {
+            border-bottom: none;
+        }
+        
+        .material-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(52, 152, 219, 0.1);
+            border-radius: 5px;
+            margin-right: 15px;
+            color: var(--primary-color);
+        }
+        
+        .material-icon.ppt {
+            background-color: rgba(231, 76, 60, 0.1);
+            color: var(--accent-color);
+        }
+        
+        .material-icon.pdf {
+            background-color: rgba(230, 126, 34, 0.1);
+            color: #e67e22;
+        }
+        
+        .material-icon.doc {
+            background-color: rgba(41, 128, 185, 0.1);
+            color: #2980b9;
+        }
+        
+        .badge-online {
+            background-color: var(--secondary-color);
+        }
+        
+        .badge-offline {
+            background-color: #95a5a6;
+        }
+        
+        .status-active {
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+        
+        .status-inactive {
+            color: #95a5a6;
+            font-weight: 600;
+        }
+        
+        .btn-add {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-size: 0.8rem;
+        }
+        
+        .btn-add:hover {
+            background-color: #2980b9;
+            color: white;
+        }
+        .fc {
+            width: 100%;
+            max-width: 100%;
+            overflow: hidden;
+        }
+        
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .main-content {
+                margin-left: 0;
+                width: 100%;
+            }
+            .sidebar {
+                display: none;
+                width: 80%;
+                position: fixed;
+                z-index: 999;
+                height: 100vh;
+            }
+            .sidebar.mobile-show {
+                display: block;
+            }
+        }
