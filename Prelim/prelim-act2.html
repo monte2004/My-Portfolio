@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 90%;
+            margin: auto;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background-color: rgb(155, 25, 16);
+            color: white;
+            padding: 10px;
+            font-size: 24px;
+        }
+
+        td {
+            padding: 5px;
+        }
+
+        .container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .image {
+            display: block;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 140, 186, 0.7);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container:hover .overlay {
+            opacity: 1;
+        }
+
+        .text {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<table border="1">
+    <tr>
+        <th colspan="3">PLACES TO BE</th>
+    </tr>
+    <tr>
+        <td rowspan="3">
+            <div class="container">
+                <a href="https://en.wikipedia.org/wiki/Big_Ben">
+                    <img class="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Elizabeth_Tower%2C_June_2022.jpg/640px-Elizabeth_Tower%2C_June_2022.jpg" alt="Big Ben" width="700px" height="690px">
+                    <div class="overlay">
+                        <div class="text">Big Ben</div>
+                    </div>
+                </a>
+            </div>
+        </td>
+        <td colspan="2">
+            <div class="container">
+                <a href="https://en.wikipedia.org/wiki/Tokyo">
+                    <img class="image" src="https://media.cntraveler.com/photos/63482b255e7943ad4006df0b/16:9/w_2560%2Cc_limit/tokyoGettyImages-1031467664.jpeg" alt="Tokyo" width="800px" height="220px">
+                    <div class="overlay">
+                        <div class="text">Tokyo</div>
+                    </div>
+                </a>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="container">
+                <a href="https://en.wikipedia.org/wiki/Paris">
+                    <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd_PhRebIS2Fd3BKlL6GgNorUitK7mhxn83w&s" alt="Paris" width="400px" height="220px">
+                    <div class="overlay">
+                        <div class="text">Paris</div>
+                    </div>
+                </a>
+            </div>
+        </td>
+        <td>
+            <div class="container">
+                <a href="https://en.wikipedia.org/wiki/New_York_City">
+                    <img class="image" src="https://media.istockphoto.com/id/1454217037/photo/statue-of-liberty-and-new-york-city-skyline-with-manhattan-financial-district-world-trade.jpg?s=612x612&w=0&k=20&c=6V54_qVlDfo59GLEdY2W8DOjLbbHTJ9y4AnJ58a3cis=" alt="New York" width="400px" height="220px">
+                    <div class="overlay">
+                        <div class="text">New York</div>
+                    </div>
+                </a>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="container">
+                <a href="https://en.wikipedia.org/wiki/Greece">
+                    <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtHQbsHShOkCa64pmW4zGs_z2RkropKrxWgA&s" alt="Greece" width="400px" height="220px">
+                    <div class="overlay">
+                        <div class="text">Greece</div>
+                    </div>
+                </a>
+            </div>
+        </td>
+        <td>
+            <div class="container">
+                <a href="https://en.wikipedia.org/wiki/Hanoi">
+                    <img class="image" src="https://pullman.accor.com/destinations/city/hanoi-1400x788-3.jpg" alt="Hanoi" width="400px" height="220px">
+                    <div class="overlay">
+                        <div class="text">Hanoi</div>
+                    </div>
+                </a>
+            </div>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

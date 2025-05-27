@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table of Contents</title>
+    <style>
+        .decimal {
+            list-style-type:decimal;
+        }
+        .upper-roman {
+            list-style-type:upper-roman;
+        }
+        .circle {
+            list-style-type:circle;
+        }
+        .square {
+            list-style-type:square;
+        }
+        .lower-roman {
+            list-style-type:lower-roman;
+        }
+        .disc {
+            list-style-type: disc;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>LISTS</h1>
+    <!--Decimal-->
+    <ol class="Decimal">
+        <li>Main Topic 1</li>
+            <!--upper-roman-->
+            <ol class="upper-roman">
+                <li>Topic 1</li>
+                <li>Topic 2</li>
+                <!--circle-->
+                    <ul class="circle">
+                        <li>Subtopic 1</li>
+                            <!--square-->
+                            <ul class="square">
+                                <li>Mini Topic 1</li>
+                                <li>Mini Topic 2</li>
+                                <li>Mini Topic 3</li>
+                            </ul>
+                        <li>Subtopic 2</li>
+                    </ul>
+                <li>Topic 3</li>
+                    <!--lower-roman-->
+                    <ol class="lower-roman">
+                        <li>Subtopic 1</li>
+                        <li>Subtopic 2</li>
+                            <!--disc-->
+                            <ul class="disc">
+                                <li>Mini Topic 1</li>
+                                <li>Mini Topic 2</li>
+                            </ul>
+                        <li>Subtopic 3</li>
+                    </ol>
+            </ol>
+        <li>Main Topic 2</li>
+        <li>Main Topic 3</li>
+            <ul class="square">
+                <li>Mini Topic 1</li>
+                <li>Mini Topic 2</li>
+                <li>Mini Topic 3</li>
+            </ul>
+    </ol>
+</body>
+</html>

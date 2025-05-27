@@ -1,0 +1,162 @@
+/* General Styles */
+body {
+    font-family: 'BankGothic Md BT', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-color: #dfd8ba;
+}
+
+/* Wrapper - Each Section */
+.wrapper {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid black;
+    background: white;
+    max-width: 1700px;
+}
+
+/* Image Container */
+.image-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.image-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Titles */
+h1 {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: none; /* Removed bottom border */
+}
+
+
+/* Image Box Styling */
+.image-box {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Definite Size (5x5 inches) */
+.sized-img {
+    width: 5in;
+    height: 5in;
+    border: 2px solid black;
+}
+
+/* Image Borders */
+.rounded-img {
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.custom-rounded-img {
+    border-radius: 10px 0 10px 0;
+    border: 2px solid black;
+}
+
+/* Float Image */
+.float-left {
+    float: left;
+    margin-right: 15px;
+    margin-left: 30%;
+    width: 200px;
+    height: auto;
+    border: 2px solid black;
+}
+
+/* Hover Effect */
+.image-hover {
+    transition: transform 0.5s ease-in-out;
+    border: 2px solid black;
+}
+
+.image-hover:hover {
+    transform: scale(1.1);
+}
+
+/* Image Comparison */
+.image-comparison {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-comparison div {
+    text-align: center;
+}
+
+.image-shadow {
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Shape-Outside */
+.circle-shape {
+    shape-outside: circle();
+    clip-path: circle();
+    border: 2px solid black;
+}
+
+.triangle-shape {
+    shape-outside: polygon(50% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    border: 2px solid black;
+}
+
+/* Masked Text */
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    position: relative;
+    background: url('https://i.redd.it/cndloj7fckab1.jpg') no-repeat center;
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    line-height: 1; 
+}
+
+/* Adjust text styles */
+.masked-text {
+    font-size: 80px;
+    font-weight: bold;
+    font-family: 'BankGothic Md BT', sans-serif;
+    text-transform: uppercase;
+    margin: 5px 0;
+    line-height: 1; 
+}
+a {
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+}
+.image-map{
+    width: 100%;
+    height: auto;
+}

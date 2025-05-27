@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile on Monitor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('wallpaper background5.png'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: 'Roboto', sans-serif;
+        }
+        .monitor-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        .monitor {
+            width: 70vw;
+            height: 65vh;
+            background-color: #02467e;
+            position: relative;
+            border: 8px solid #c8c8c8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+        .screen {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            color: white;
+            font-size: 1.2rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            overflow: auto;
+        }
+        h3, h4 {
+            font-family: 'Exo', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+        .top-section {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+        }
+        .info-container {
+            display: flex;
+            flex-direction: column;
+            width: calc(100% - 170px);
+            margin-left: 20px;
+        }
+        .info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            margin-right: 10px;
+            text-align: right; 
+        }
+        .stand {
+            width: 5vw;
+            height: 7vh;
+            background-color: #c8c8c8;
+            position: absolute;
+            bottom: -6vh;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .base {
+            width: 25vw;
+            height: 3vh;
+            background-color: #c8c8c8;
+            position: absolute;
+            bottom: -9vh;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        p {
+            text-align: justify;
+            margin: 10px;
+            font-size: 1.1rem;
+        }
+        .skills {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .skill {
+            text-align: center;
+            width: 100px;
+        }
+        .skill-pic {
+            width: 130px;
+            height: 130px;
+            object-fit: contain;
+        }
+
+        .education {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 20px;
+            flex-wrap: nowrap;
+        }
+
+        .school {
+            text-align: center;
+            width: 150px;
+        }
+
+        .school-pic {
+            width: 100px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .hobbies {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .hobby {
+            text-align: center;
+            width: 120px;
+        }
+        .hobby-pic {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+            font-size: 1.3rem;
+        }
+        .contact {
+            font-size: 1rem;
+            margin: 5px 0;
+        }
+        .social-media {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.2s ease-in-out;
+        }
+        .contact-icon:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="monitor-container">
+        <div class="monitor">     
+            <div class="screen">
+                <div class="top-section">
+                    <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+                    <div class="info-container">
+                        <div class="info">
+                            <strong>Name:</strong> <span>Mark Justin D. Montesines</span>
+                        </div>
+                        <div class="info">
+                            <strong>Date of Birth:</strong> <span>09/11/2004</span>
+                        </div>
+                        <div class="info">
+                            <strong>Gender:</strong> <span>Male</span>
+                        </div>
+                        <div class="info">
+                            <strong>Country:</strong> <span>Philippines</span>
+                        </div>
+                        <div class="info">
+                            <strong>Address:</strong> <span>Antipolo City, Rizal</span>
+                        </div>
+                        <div class="info">
+                            <strong>School:</strong> <span>University of the East Manila</span>
+                        </div>
+                    </div>
+                </div>
+                <h3>About Me</h3>
+                <p>
+                    Hi, I’m a second-year Computer Science student at the University of the East. I’m currently 
+                    developing my coding skills and working on improving the way I think like a programmer. 
+                    While I haven’t settled on a specific field yet, I’m exploring different areas and trying to
+                     find what excites me the most. Web development has caught my interest, and I’m hoping that 
+                     as I dive deeper into it, I’ll gain clarity on the path I want to take in the tech industry.
+                     There’s still a lot to learn, but I’m eager to keep growing and improving.
+                </p>
+
+                <h3>Skills</h3>
+                <div class="skills">
+                    <div class="skill">
+                        <img src="python logo.png" alt="Python" class="skill-pic">
+                    </div>
+                    <div class="skill">
+                        <img src="java logo.png" alt="Java" class="skill-pic">
+                    </div>
+                    <div class="skill">
+                        <img src="c++ logo.png" alt="C++" class="skill-pic">
+                    </div>
+                    <div class="skill">
+                        <img src="mysql logo.png" alt="MySQL" class="skill-pic">
+                    </div>
+                    <div class="skill">
+                        <img src="html logo.png" alt="HTML" class="skill-pic">
+                    </div>
+                    <div class="skill">
+                        <img src="css logo.png" alt="CSS" class="skill-pic">
+                    </div>
+                </div>
+
+                <h3>Education</h3>
+                <div class="education">
+                    <div class="school">
+                        <img src="fclc logo.png" alt="FCLC" class="school-pic">
+                    </div>
+                    <div class="school">
+                        <img src="olps logo.png" alt="High School" class="school-pic">
+                    </div>
+                    <div class="school">
+                        <img src="ue logo.png" alt="University" class="school-pic">
+                    </div>
+                </div>
+
+                <h3>Hobbies</h3>
+                <div class="hobbies">
+                    <div class="hobby">
+                        <img src="lol logo.png" alt="League of Legends" class="hobby-pic">
+                    </div>
+                    <div class="hobby">
+                        <img src="netflix logo.png" alt="Netflix" class="hobby-pic">
+                    </div>
+                    <div class="hobby">
+                        <img src="tiktok logo.jpg" alt="TikTok" class="hobby-pic">
+                    </div>
+                </div>
+
+                <div class="contact-info">
+                    <h4>Contact Information</h4>
+                    <div class="contact"><strong>Email:</strong> montesines.markjustin@ue.edu.ph</div>
+                    <div class="contact"><strong>Phone:</strong> +63 912 345 6789</div>
+                    <div class="social-media">
+                        <a href="https://www.facebook.com/share/1F9yK8T69N/?mibextid=wwXIfr" target="_blank">
+                            <img src="fb logo.png" alt="Facebook" class="contact-icon">
+                        </a>
+                        <a href="https://www.instagram.com/mjust.in?igsh=MWpsaGdyZ2thNGlzNg%3D%3D&utm_source=qr" target="_blank">
+                            <img src="ig logo.png" alt="Instagram" class="contact-icon">
+                        </a>
+                        <a href="https://github.com/monte2004" target="_blank">
+                            <img src="github logo.png" alt="Github" class="contact-icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stand"></div>
+        <div class="base"></div>
+    </div>
+</body>
+</html>

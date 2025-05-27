@@ -1,0 +1,345 @@
+/* Reset default margins & paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar */
+.navbar {
+    position: fixed; /* Keeps navbar always visible */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: black; /* Ensures visibility */
+    padding: 15px 50px;
+    display: flex;
+    align-items: center;
+    z-index: 1000; /* Keeps navbar above other elements */
+}
+
+/* LuxeLiving Logo */
+.brand {
+    font-size: 24px;
+    font-weight: 700;
+    color: gold;
+    margin: 0 20px;
+}
+
+/* Navigation Links */
+.nav-links {
+    margin-left: auto;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: background 0.3s, color 0.3s;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    background: darkgoldenrod;
+    border-radius: 5px;
+}
+
+/* New Year Banner */
+.new-year-banner {
+    width: 100vw; /* Makes it span the full width */
+    text-align: center;
+    background: black; /* Matches navbar background */
+    margin-top: 0; /* Removes space */
+}
+
+.new-year-banner img {
+    width: 100%; /* Ensures full width */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes extra spacing */
+}
+.discounted-price {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.original-price {
+    font-size: 16px;
+    text-decoration: line-through;
+    margin-left: 5px;
+}
+
+/*Category Page*/
+.category-page {
+    background-image: url("Background Image.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: rgb(255, 255, 255);
+}
+.category-page-container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+.category-page-box {
+    border: 5px solid rgb(255, 255, 255);
+    padding: 15px;
+    margin: 40px 0 15px 0;
+    position: relative;
+}
+.category-page-category-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: -10px;
+    display: inline-block;
+    padding: 2px 5px;
+}
+.category-page-image-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 10px;
+}
+.category-page-image-container img {
+    width: 200px; /* Increase width */
+    height: 200px; /* Increase height */
+    object-fit: cover;
+}
+.category-page h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.category-page-see-more {
+    text-align: left;
+    margin-top: 15px;
+}
+.category-page-see-more a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    transition: 0.3s;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;;
+}
+.category-page-see-more a:hover {
+    background: darkgoldenrod;
+}
+
+/*Description Page*/
+.description-page {
+    background: url('Background Image.png') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+.description-page-content {
+    display: flex;
+    align-items: center;
+    width: 95%;
+    max-width: 1300px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+}
+.description-page-content img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+.description-page-content-details {
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    text-align: left;
+}
+.description-page-content h2 {
+    font-size: 36px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.description-page-content-description {
+    font-size: 22px;
+    text-align: justify;
+}
+.description-page-options-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.description-page-options {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 22px;
+}
+.description-page select {
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+.description-page button {
+    padding: 15px 20px;
+    font-size: 22px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.description-page-buy-now {
+    background: white;
+    color: rgb(6, 6, 6);
+    border: none;
+    font-weight: bold;
+}
+.description-page-buy-now:hover {
+    background: darkgoldenrod;
+}
+
+/*Gallery Page*/
+.gallery-page {
+    background-image: url("Background Image.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+.gallery-page-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+.gallery-page-container-category {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.gallery-page-container-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+}
+.gallery-page-container-item {
+    border: 5px solid white;
+    padding: 30px;
+    text-align: center;
+}
+.gallery-page-container-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+a.gallery-page-container-see-more {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    transition: 0.3s;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+a.gallery-page-container-see-more:hover {
+    background: darkgoldenrod;
+}
+
+/*Home Page*/
+.home-page {
+    background: url('Background Image.png') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #F5E1C0;
+    padding: 20px;
+}
+
+.home-page-container {
+    padding: 60px;
+    border-radius: 15px;
+    max-width: 900px;
+}
+
+.home-page-container h1 {
+    font-size: 100px; /* Even Bigger Title */
+    margin: 0;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7);
+    font-weight: 700;
+}
+
+.home-page-container p {
+    font-size: 28px; /* Larger message */
+    margin-top: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    line-height: 1.6;
+}
+/* Button */
+a.home-page-container-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    transition: 0.3s;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+a.home-page-container-button:hover {
+    background: darkgoldenrod;
+}
+
+/*Thank You Page*/
+.thank-you-page {
+    background: url('Background Image.png') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #F5E1C0;
+    padding: 20px;
+}
+
+.thank-you-page-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 60px;
+    max-width: 900px;
+}
+
+.thank-you-page-container h1 {
+    font-size: 100px; /* Even Bigger Thank You */
+    margin: 0;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7);
+    font-weight: 700;
+}
+
+.thank-you-page-container p {
+    font-size: 28px; /* Larger appreciation message */
+    margin-top: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    line-height: 1.6;
+}

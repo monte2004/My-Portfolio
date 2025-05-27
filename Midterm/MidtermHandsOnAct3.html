@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Data Sheet</title>
+  <link rel="stylesheet" href="midtermhandsonact3.css" />
+</head>
+<body>
+  <div class="form-container">
+    <div class="header">
+      <div class="logo"></div>
+      <div class="header-text">
+        <h1>Our Lady of Peace School</h1>
+        <h2>ENROLLMENT SYSTEM</h2>
+        <h3>PERSONAL DATA SHEET</h3>
+        <p>(Graduate School, Law, Medicine)</p>
+      </div>
+      <div class="program-info">
+        <div class="program">
+          <label for="program">Program:</label>
+          <input type="text" id="program" name="program" />
+        </div>
+        <div class="student-number">
+          <label for="student-number">Student #:</label>
+          <input type="text" id="student-number" name="student-number" />
+        </div>
+      </div>
+    </div>
+
+    <form class="name-section">
+      <div class="field">
+        <input type="text" id="surname" name="surname" />
+        <label for="surname">SURNAME</label>
+      </div>
+      <div class="field">
+        <input type="text" id="given-name" name="given-name" />
+        <label for="given-name">GIVEN NAME</label>
+      </div>
+      <div class="field">
+        <input type="text" id="middle-name" name="middle-name" />
+        <label for="middle-name">MIDDLE NAME</label>
+      </div>
+      <div class="field aux">
+        <input type="text" id="aux-name" name="aux-name" />
+        <label for="aux-name">
+          AUXILIARY NAME<br>
+          <span class="small">(Sr, Jr, I, II, III, etc.)</span>
+        </label>
+      </div>
+    </form>
+  </div>
+
+  <div class="student-details">
+    <h4>STUDENT DETAILS:</h4>
+  
+    <div class="row">
+      <label for="city-address">City Address:</label>
+      <input type="text" id="city-address" name="city-address" />
+    </div>
+  
+    <div class="row multi">
+        <label for="zip-code-1">Zip Code:</label>
+        <input type="text" id="zip-code-1" name="zip-code-1" class="short" />
+      
+        <label for="tel-no">Tel. No.:</label>
+        <input type="text" id="tel-no" name="tel-no" class="medium" />
+      
+        <label for="email">E-mail address:</label>
+        <input type="email" id="email" name="email" class="long" />
+    </div>
+      
+  
+    <div class="row">
+      <label for="home-address">Home Address:</label>
+      <input type="text" id="home-address" name="home-address" />
+    </div>
+  
+    <div class="row-grid">
+      <div class="column">
+        <div class="pair">
+          <label for="zip-code-2">Zip Code:</label>
+          <input type="text" id="zip-code-2" name="zip-code-2" />
+        </div>
+        <div class="pair">
+          <label for="birthday">Birthday:</label>
+          <input type="text" id="birthday" name="birthday" />
+        </div>
+        <div class="pair">
+          <label for="birthplace">Birthplace:</label>
+          <input type="text" id="birthplace" name="birthplace" />
+        </div>
+        <div class="pair">
+          <label for="citizenship">Citizenship:</label>
+          <input type="text" id="citizenship" name="citizenship" />
+        </div>
+      </div>
+      <div class="column">
+        <div class="pair">
+          <label for="region">Region:</label>
+          <input type="text" id="region" name="region" />
+        </div>
+        <div class="pair">
+          <label for="age">Age:</label>
+          <input type="text" id="age" name="age" />
+        </div>
+        <div class="pair">
+          <label for="religion">Religion:</label>
+          <input type="text" id="religion" name="religion" />
+        </div>
+        <div class="pair">
+          <label for="sex">Sex:</label>
+          <input type="text" id="sex" name="sex" />
+        </div>
+      </div>
+    </div>
+  
+    <div class="row acr">
+        <label for="acr">If Alien, ACR # <span class="note">(see Registrar):</span></label>
+        <input type="text" id="acr" name="acr" class="short" />
+    </div>
+  </div>
+  
+  <div class="status-section">
+    <div class="status-titles">
+      <h4>Legal Status:</h4>
+      <h4>Civil Status:</h4>
+    </div>
+    <div class="status-grid">
+      <!-- Legal Status Column -->
+      <div class="status-column">
+        <label><input type="checkbox" name="legal-status" value="citizen"> Citizen of RP</label>
+        <label><input type="checkbox" name="legal-status" value="resident"> Permanent Resident</label>
+        <label><input type="checkbox" name="legal-status" value="student-visa">
+          Person granted permission to enter and remain as a student in RP on a visa for a defined period of time
+        </label>
+        <label><input type="checkbox" name="legal-status" value="dependent-visa">
+          Person granted permission to enter and remain as a child or spouse of a worker on a visa for a defined period of time
+        </label>
+        <label><input type="checkbox" name="legal-status" value="other-visa"> Other visa</label>
+        <label><input type="checkbox" name="legal-status" value="unknown"> Legal status not known</label>
+      </div>
+  
+      <!-- Civil Status Column -->
+      <div class="status-column">
+        <label><input type="checkbox" name="civil-status" value="single"> Single</label>
+        <label><input type="checkbox" name="civil-status" value="married"> Married</label>
+        <label><input type="checkbox" name="civil-status" value="divorced"> Divorced</label>
+        <label><input type="checkbox" name="civil-status" value="widowed"> Widowed</label>
+        <label><input type="checkbox" name="civil-status" value="separated"> Separated</label>
+  
+        <div class="employment-group">
+          <label><input type="checkbox" name="employment-status" value="working"> Working</label>
+          <label><input type="checkbox" name="employment-status" value="not-working"> Not working</label>
+          <label class="tel-label">Office/Bus. Tel. #: <input type="text" name="office-tel"></label>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="parent-guardian-section">
+    <!-- Parent Info -->
+    <div class="parent-info">
+      <!-- Father -->
+      <div class="parent-column">
+        <h4>FATHER’S INFORMATION:</h4>
+        <label>Surname: <input type="text" name="father-surname"></label>
+        <label>First Name: <input type="text" name="father-first-name"></label>
+        <label>Middle Name: <input type="text" name="father-middle-name"></label>
+        <label>Auxiliary Name: <input type="text" name="father-aux-name"></label>
+        <label>Occupation/Employment: <input type="text" name="father-occupation"></label>
+        <label>Educational Attainment: <input type="text" name="father-education"></label>
+        <label>Parent’s Address: <input type="text" name="father-address"></label>
+        <label>Zip Code: <input type="text" name="father-zip"></label>
+      </div>
+  
+      <!-- Mother -->
+      <div class="parent-column">
+        <h4>MOTHER’S INFORMATION:</h4>
+        <label>Surname: <input type="text" name="mother-surname"></label>
+        <label>First Name: <input type="text" name="mother-first-name"></label>
+        <label>Middle Name: <input type="text" name="mother-middle-name"></label>
+        <label>Auxiliary Name: <input type="text" name="mother-aux-name"></label>
+        <label>Occupation/Employment: <input type="text" name="mother-occupation"></label>
+        <label>Educational Attainment: <input type="text" name="mother-education"></label>
+        <label>Parent’s Tel. #: <input type="text" name="parent-tel"></label>
+      </div>
+    </div>
+  
+    <!-- Guardian Info -->
+    <div class="guardian-info">
+      <h4>GUARDIAN’S INFORMATION: <span class="small-note">(If Applicable)</span></h4>
+      <div class="guardian-grid">
+        <div class="guardian-left">
+          <label>Surname: <input type="text" name="guardian-surname"></label>
+          <label>First Name: <input type="text" name="guardian-first-name"></label>
+          <label>Middle Name: <input type="text" name="guardian-middle-name"></label>
+          <label>Auxiliary Name: <input type="text" name="guardian-aux-name"></label>
+          <label>Occupation/Employment: <input type="text" name="guardian-occupation"></label>
+          <label>Off./Bus. Tel. #: <input type="text" name="guardian-office-tel"></label>
+        </div>
+        <div class="guardian-right">
+          <label>Guardian’s Address: <input type="text" name="guardian-address"></label>
+          <label>Zip Code: <input type="text" name="guardian-zip"></label>
+          <label>Tel. #: <input type="text" name="guardian-tel"></label>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+</body>
+</html>
